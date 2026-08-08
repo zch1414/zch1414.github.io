@@ -3,190 +3,123 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="ZCH 的学术主页：具身智能、视觉-语言-动作模型、机器人学习与安全机械臂执行。">
-    <meta name="theme-color" content="#fbfbf9">
-    <meta property="og:title" content="ZCH | Embodied AI & Robot Learning">
-    <meta property="og:description" content="Research on VLA policies, safe robot execution, ROS 2, and MoveIt.">
+    <meta name="description" content="ZCH ?????????????VLA?ROS 2?MoveIt ???????????">
+    <meta name="theme-color" content="#f7f7f5">
+    <meta property="og:title" content="ZCH | ????????">
+    <meta property="og:description" content="?????VLA ?????????">
     <meta property="og:type" content="profile">
-    <meta property="og:image" content="https://zch1414.github.io/assets/vla-execbench.png">
-    <title>ZCH | Embodied AI & Robot Learning</title>
+    <meta property="og:image" content="https://zch1414.github.io/assets/hero-robotics.jpg">
+    <title>ZCH | ????????</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <a class="skip-link" href="#main">跳到主要内容</a>
+    <a class="skip-link" href="#main">??????</a>
 
     <header class="site-header">
       <div class="page-width header-inner">
-        <a class="site-name" href="#top" aria-label="ZCH 主页">ZCH</a>
-        <nav aria-label="主要导航">
-          <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#manuscripts">Manuscripts</a>
-          <a href="#notes">Notes</a>
+        <a class="site-name" href="#top" aria-label="????">ZCH</a>
+        <nav aria-label="????">
+          <a href="#work">??</a>
+          <a href="#manuscripts">??</a>
+          <a href="#notes">??</a>
           <a href="https://github.com/zch1414" target="_blank" rel="noreferrer">GitHub</a>
         </nav>
       </div>
     </header>
 
-    <main class="page-width" id="main">
-      <section class="profile" id="top" aria-labelledby="profile-name">
-        <div class="profile-copy" id="about">
-          <p class="field">Embodied AI · Robot Learning</p>
-          <h1 id="profile-name">ZCH</h1>
-          <p class="role">Independent research & engineering</p>
-
-          <div class="bio">
-            <p>我关注视觉-语言-动作模型如何从离线策略输出走向安全、可复现的真实机械臂执行。目前的工作围绕紧凑型 VLA 原型、ROS 2 + MoveIt 接口，以及面向执行过程的评测方法展开。</p>
-            <p>核心问题包括动作表示与机器人接口的对齐、部署时安全约束、策略服务延迟，以及不同机器人配置下结果是否仍然可比较。</p>
-          </div>
-
-          <div class="profile-links" aria-label="个人链接">
-            <a href="https://github.com/zch1414" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="#research">Research</a>
-            <a href="#manuscripts">Working manuscripts</a>
-          </div>
-        </div>
-
-        <figure class="profile-figure">
-          <img src="assets/hero-robotics.jpg" alt="实验环境中的 ABB 机械臂" width="1024" height="576">
-          <figcaption>Robot manipulation system. Reference image under CC BY 2.0.</figcaption>
-        </figure>
+    <main id="main">
+      <section class="intro page-width" id="top" aria-labelledby="page-title">
+        <p class="eyebrow">ZCH ? ????????</p>
+        <h1 id="page-title">????? ZCH?</h1>
+        <p class="lead">????????????????????</p>
+        <p class="intro-copy">?????? VLA ?????????????? ROS 2?MoveIt?????????????????????????????????</p>
+        <p class="intro-links">
+          <a href="https://github.com/zch1414" target="_blank" rel="noreferrer">GitHub</a>
+          <span aria-hidden="true">/</span>
+          <a href="#work">????</a>
+        </p>
       </section>
 
-      <section class="content-section updates" aria-labelledby="updates-title">
-        <h2 id="updates-title">Updates</h2>
-        <dl class="update-list">
-          <div>
-            <dt>2026.07</dt>
-            <dd>整理 VLA 机械臂研究工作区，加入自动测试、实验模板、数据契约和机器人交接检查。</dd>
-          </div>
-          <div>
-            <dt>2026.06</dt>
-            <dd>完成首个本地 mock pipeline：策略动作、安全评估、MoveIt 交接与审计结果能够成套生成。</dd>
-          </div>
-        </dl>
-      </section>
+      <figure class="hero-image page-width">
+        <img src="assets/hero-robotics.jpg" alt="?????? ABB ???" width="1024" height="576">
+        <figcaption>Robot manipulation system. Photo: Misanthropic One, CC BY 2.0.</figcaption>
+      </figure>
 
-      <section class="content-section" id="research" aria-labelledby="research-title">
-        <div class="section-heading">
-          <h2 id="research-title">Research</h2>
-          <p>研究目标不是单独提高模型分数，而是建立从策略提议到机器人结果的可执行、可解释和可复现链路。</p>
+      <section class="content-section page-width" id="work" aria-labelledby="work-title">
+        <div class="section-intro">
+          <h2 id="work-title">????</h2>
+          <p>????????????????????????</p>
         </div>
 
-        <div class="interest-grid">
+        <div class="work-list">
           <article>
-            <h3>Vision-Language-Action</h3>
-            <p>SmolVLA、OpenVLA、π 系列和其他开放策略的复现、适配与任务数据设计。</p>
+            <div>
+              <h3>VLA-ExecBench</h3>
+              <p>??????????????MoveIt ???????????????????</p>
+            </div>
+            <a href="assets/vla-execbench.png">?????</a>
           </article>
           <article>
-            <h3>Safe Robot Execution</h3>
-            <p>动作限幅、坐标系与单位契约、碰撞检查、工作空间约束和失败回退。</p>
+            <div>
+              <h3>????? VLA ??</h3>
+              <p>? SmolVLA ? LeRobot ????????????????????????</p>
+            </div>
+            <span>???</span>
           </article>
           <article>
-            <h3>Evaluation & Systems</h3>
-            <p>策略服务、端到端延迟、配对回放，以及跨安全边界和机器人配置的执行评测。</p>
-          </article>
-        </div>
-
-        <div class="selected-work" aria-labelledby="selected-work-title">
-          <h3 class="subsection-title" id="selected-work-title">Selected work</h3>
-
-          <article class="project project-featured">
-            <a class="project-image" href="assets/vla-execbench.png" aria-label="查看 VLA-ExecBench 架构图">
-              <img src="assets/vla-execbench.png" alt="VLA-ExecBench 执行评测架构图" width="2689" height="1415" loading="lazy">
-            </a>
             <div>
-              <p class="project-meta">Benchmark & infrastructure · 2026</p>
-              <h4>VLA-ExecBench</h4>
-              <p>把策略提议、动作契约、安全投影、MoveIt 可行性判断、控制器命令和任务结果连接成可审计证据链，并支持同一动作在不同安全边界下的配对回放。</p>
-              <p class="keywords">Action contracts · safety envelopes · counterfactual replay</p>
+              <h3>VLA-to-MoveIt Bridge</h3>
+              <p>?????????????????????????????????????</p>
             </div>
-          </article>
-
-          <article class="project">
-            <div class="project-number" aria-hidden="true">02</div>
-            <div>
-              <p class="project-meta">Prototype system · 2026</p>
-              <h4>Compact VLA robot demo</h4>
-              <p>以 SmolVLA / LeRobot 为入口，建设小规模数据采集、策略推理服务和桌面机械臂演示流程；先验证单任务稳定性，再扩展任务和场景。</p>
-              <p class="keywords">SmolVLA · LeRobot · low-cost data collection</p>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-number" aria-hidden="true">03</div>
-            <div>
-              <p class="project-meta">Robot software · 2026</p>
-              <h4>VLA-to-MoveIt bridge</h4>
-              <p>把模型动作转换为明确的机器人坐标和单位，在下发前执行边界、速度、碰撞与可达性检查，并保留拒绝或修正动作的原因。</p>
-              <p class="keywords">ROS 2 · MoveIt 2 · dry-run validation</p>
-            </div>
+            <span>???</span>
           </article>
         </div>
       </section>
 
-      <section class="content-section" id="manuscripts" aria-labelledby="manuscripts-title">
-        <div class="section-heading">
-          <h2 id="manuscripts-title">Working Manuscripts</h2>
-          <p>以下均为进行中的研究手稿，不代表已经投稿或发表。</p>
+      <section class="content-section page-width" id="manuscripts" aria-labelledby="manuscripts-title">
+        <div class="section-intro">
+          <h2 id="manuscripts-title">????</h2>
+          <p>????????????????????</p>
         </div>
 
-        <ol class="publication-list">
+        <ol class="manuscript-list">
           <li>
-            <span class="pub-year">2026</span>
-            <div>
-              <h3>Safety-Constrained Evaluation of Vision-Language-Action Policies for Single-Arm Manipulation</h3>
-              <p>Working draft · VLA execution safety and benchmark design</p>
-            </div>
+            <h3>Safety-Constrained Evaluation of Vision-Language-Action Policies for Single-Arm Manipulation</h3>
+            <p>VLA ?????????</p>
           </li>
           <li>
-            <span class="pub-year">2026</span>
-            <div>
-              <h3>Low-Resource Adaptation of Open Vision-Language-Action Policies for Constrained Single-Arm Manipulation</h3>
-              <p>Working draft · adaptation under limited data and compute</p>
-            </div>
+            <h3>Low-Resource Adaptation of Open Vision-Language-Action Policies for Constrained Single-Arm Manipulation</h3>
+            <p>???????????????</p>
           </li>
           <li>
-            <span class="pub-year">2026</span>
-            <div>
-              <h3>Remote Vision-Language-Action Policy Serving with Local MoveIt Safety Execution</h3>
-              <p>Working draft · remote inference and local safety control</p>
-            </div>
+            <h3>Remote Vision-Language-Action Policy Serving with Local MoveIt Safety Execution</h3>
+            <p>???????????</p>
           </li>
         </ol>
       </section>
 
-      <section class="content-section" id="notes" aria-labelledby="notes-title">
-        <div class="section-heading">
-          <h2 id="notes-title">Research Notes</h2>
-          <p>用于支持模型选择和演示样机决策的持续调研。</p>
+      <section class="content-section page-width" id="notes" aria-labelledby="notes-title">
+        <div class="section-intro">
+          <h2 id="notes-title">????</h2>
+          <p>???????????????????????</p>
         </div>
 
         <ul class="note-list">
-          <li>
-            <span>Model landscape</span>
-            <strong>π0.5 与 RynnVLA 公开权重的定位和部署边界</strong>
-          </li>
-          <li>
-            <span>Prototype planning</span>
-            <strong>SmolVLA 权重、训练数据与适合的演示任务</strong>
-          </li>
-          <li>
-            <span>Implementation guide</span>
-            <strong>Qwen 系 VLA 到机械臂执行的具体工程流程</strong>
-          </li>
+          <li>?0.5 ? RynnVLA ??????????</li>
+          <li>SmolVLA ????????????</li>
+          <li>Qwen ? VLA ??????????</li>
         </ul>
       </section>
 
-      <section class="content-section contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Contact</h2>
-        <p>当前公开联系方式为 <a href="https://github.com/zch1414" target="_blank" rel="noreferrer">GitHub @zch1414</a>。</p>
+      <section class="contact page-width" aria-labelledby="contact-title">
+        <h2 id="contact-title">??</h2>
+        <p>???? <a href="https://github.com/zch1414" target="_blank" rel="noreferrer">GitHub @zch1414</a> ????</p>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="page-width footer-inner">
-        <p>© 2026 ZCH</p>
+        <p>? 2026 ZCH</p>
         <p>Robot image: <a href="https://www.flickr.com/photos/22902505@N05/16422885845" target="_blank" rel="noreferrer">Misanthropic One</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a></p>
       </div>
     </footer>
