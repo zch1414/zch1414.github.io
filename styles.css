@@ -210,8 +210,7 @@ h1 {
   border-bottom: 1px solid var(--line);
 }
 
-.work-list h3,
-.manuscript-list h3 {
+.work-list h3 {
   margin: 0;
   font-size: 17px;
   line-height: 1.45;
@@ -237,51 +236,45 @@ h1 {
   color: var(--link);
 }
 
-.manuscript-list {
+.status-done {
+  color: #35664f !important;
+}
+
+.ordered-list {
   margin: 0;
   padding: 0;
   list-style: none;
-  counter-reset: manuscript;
+  counter-reset: item;
   border-top: 1px solid var(--line);
 }
 
-.manuscript-list li {
+.ordered-list li {
   position: relative;
   padding: 21px 0 21px 38px;
   border-bottom: 1px solid var(--line);
-  counter-increment: manuscript;
+  counter-increment: item;
 }
 
-.manuscript-list li::before {
+.ordered-list li::before {
   position: absolute;
   top: 22px;
   left: 0;
   color: var(--faint);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 13px;
-  content: counter(manuscript, decimal-leading-zero);
+  content: counter(item, decimal-leading-zero);
 }
 
-.manuscript-list h3 {
-  font-family: Georgia, "Times New Roman", serif;
+.ordered-list h3 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.45;
+  font-weight: 650;
 }
 
-.manuscript-list p {
+.ordered-list p {
   margin: 6px 0 0;
   color: var(--muted);
-  font-size: 12px;
-}
-
-.note-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  border-top: 1px solid var(--line);
-}
-
-.note-list li {
-  padding-block: 17px;
-  border-bottom: 1px solid var(--line);
   font-size: 14px;
 }
 
