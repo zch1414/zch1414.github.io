@@ -3,25 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="ZCH ?????????????VLA?ROS 2?MoveIt ???????????">
+    <meta name="description" content="ZCH 的个人主页，记录具身智能、VLA、ROS 2、MoveIt 与机械臂执行相关工作。">
     <meta name="theme-color" content="#f7f7f5">
-    <meta property="og:title" content="ZCH | ????????">
-    <meta property="og:description" content="?????VLA ?????????">
+    <meta property="og:title" content="ZCH | 机器人与具身智能">
+    <meta property="og:description" content="具身智能、VLA 与真实机械臂执行。">
     <meta property="og:type" content="profile">
     <meta property="og:image" content="https://zch1414.github.io/assets/hero-robotics.jpg">
-    <title>ZCH | ????????</title>
+    <title>ZCH | 机器人与具身智能</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <a class="skip-link" href="#main">??????</a>
+    <a class="skip-link" href="#main">跳到主要内容</a>
 
     <header class="site-header">
       <div class="page-width header-inner">
-        <a class="site-name" href="#top" aria-label="????">ZCH</a>
-        <nav aria-label="????">
-          <a href="#status">??</a>
-          <a href="#engineering">??</a>
-          <a href="#next">???</a>
+        <a class="site-name" href="#top" aria-label="返回主页">ZCH</a>
+        <nav aria-label="主要导航">
+          <a href="#status">进度</a>
+          <a href="#engineering">工程</a>
+          <a href="#next">下一步</a>
           <a href="https://github.com/zch1414" target="_blank" rel="noreferrer">GitHub</a>
         </nav>
       </div>
@@ -29,157 +29,157 @@
 
     <main id="main">
       <section class="intro page-width" id="top" aria-labelledby="page-title">
-        <p class="eyebrow">ZCH ? VLA ???????</p>
-        <h1 id="page-title">??? VLA ??????????</h1>
-        <p class="lead">Windows ????????? Linux GPU ????ROS 2 + MoveIt ????????</p>
-        <p class="intro-copy">?????????????130 ?????????? GPU ?????????????????????????????????????????</p>
+        <p class="eyebrow">ZCH · VLA 单臂机器人项目</p>
+        <h1 id="page-title">正在做 VLA 策略的真机执行接口。</h1>
+        <p class="lead">Windows 写代码和测试，远程 Linux GPU 跑模型，ROS 2 + MoveIt 负责机器人执行。</p>
+        <p class="intro-copy">目前本地验证框架可以运行，130 项自动测试通过；远程 GPU 复现还没开始；真实机械臂尚未接入。下面只记录已经做完的工作、当前阻塞和下一步任务。</p>
         <p class="intro-links">
-          <a href="#status">??????</a>
+          <a href="#status">查看当前进度</a>
           <span aria-hidden="true">/</span>
           <a href="https://github.com/zch1414" target="_blank" rel="noreferrer">GitHub</a>
         </p>
       </section>
 
       <figure class="hero-image page-width">
-        <img src="assets/hero-robotics.jpg" alt="?????? ABB ???" width="1024" height="576">
+        <img src="assets/hero-robotics.jpg" alt="实验环境中的 ABB 机械臂" width="1024" height="576">
         <figcaption>Robot manipulation system. Photo: Misanthropic One, CC BY 2.0.</figcaption>
       </figure>
 
       <section class="content-section page-width" id="status" aria-labelledby="status-title">
         <div class="section-intro">
-          <h2 id="status-title">????</h2>
-          <p>?? 2026 ? 8 ?????????????</p>
+          <h2 id="status-title">当前进度</h2>
+          <p>截至 2026 年 8 月，按实际可运行状态记录。</p>
         </div>
 
         <div class="work-list">
           <article>
             <div>
-              <h3>???????</h3>
-              <p>??????????????????????????????????? 130 ????</p>
+              <h3>本地开发与测试</h3>
+              <p>本地验证流程可以生成动作日志、安全评估和机器人交接文件；当前自动测试为 130 项通过。</p>
             </div>
-            <span class="status-done">???</span>
+            <span class="status-done">可运行</span>
           </article>
           <article>
             <div>
-              <h3>?? GPU ????</h3>
-              <p>??????????????????? LeRobot ACT????????? SSH GPU ???</p>
+              <h3>远程 GPU 模型复现</h3>
+              <p>执行脚本和工作单已经准备好，首个任务是 LeRobot ACT；目前还没有可用的 SSH GPU 主机。</p>
             </div>
-            <span>?? GPU</span>
+            <span>等待 GPU</span>
           </article>
           <article>
             <div>
-              <h3>???????</h3>
-              <p>??????????? MoveIt ???????????????????????????</p>
+              <h3>真实机械臂执行</h3>
+              <p>仍保持关闭。必须先完成 MoveIt 碰撞检查、工作空间、速度限制、陈旧动作拒绝和急停预检。</p>
             </div>
-            <span>???</span>
+            <span>未接入</span>
           </article>
         </div>
       </section>
 
       <section class="content-section page-width" id="engineering" aria-labelledby="engineering-title">
         <div class="section-intro">
-          <h2 id="engineering-title">????????</h2>
-          <p>??????????????????????</p>
+          <h2 id="engineering-title">已经做的工程工作</h2>
+          <p>这些内容已经存在于当前项目代码和验证流程中。</p>
         </div>
 
         <div class="work-list">
           <article>
             <div>
               <h3>VLA-to-MoveIt Bridge</h3>
-              <p>????????????????????????????????????????? dry-run?</p>
+              <p>定义末端位姿增量和夹爪动作格式，检查坐标、单位、工作空间、速度和动作时效；当前默认 dry-run。</p>
             </div>
-            <span>????</span>
+            <span>代码已有</span>
           </article>
           <article>
             <div>
-              <h3>?? Mock Pipeline</h3>
-              <p>???????????????? MoveIt ???????????????????????????</p>
+              <h3>本地 Mock Pipeline</h3>
+              <p>把策略动作、安全评估、失败记录和 MoveIt 交接结果成套输出，用来验证完整流程而不是冒充真实实验。</p>
             </div>
-            <span>???</span>
+            <span>已跑通</span>
           </article>
           <article>
             <div>
-              <h3>???????</h3>
-              <p>???????????????????????????????????????????????</p>
+              <h3>实验留档与审计</h3>
+              <p>每次实验要求保留命令、代码版本、硬件、动作日志、安全摘要和失败记录，缺少证据的结果不写进论文。</p>
             </div>
-            <a href="assets/vla-execbench.png">?????</a>
+            <a href="assets/vla-execbench.png">查看流程图</a>
           </article>
           <article>
             <div>
-              <h3>???????</h3>
-              <p>??? LeRobot ACT?SmolVLA?OpenVLA ? OpenVLA-OFT ????????????????</p>
+              <h3>模型复现工作单</h3>
+              <p>已经为 LeRobot ACT、SmolVLA、OpenVLA 和 OpenVLA-OFT 准备启动脚本、输出目录和检查项。</p>
             </div>
-            <span>????</span>
+            <span>尚未实跑</span>
           </article>
         </div>
       </section>
 
       <section class="content-section page-width" id="next" aria-labelledby="next-title">
         <div class="section-intro">
-          <h2 id="next-title">???</h2>
-          <p>????????????????</p>
+          <h2 id="next-title">下一步</h2>
+          <p>按当前顺序推进，不跳过安全门槛。</p>
         </div>
 
         <ol class="ordered-list">
           <li>
-            <h3>???? Linux GPU</h3>
-            <p>?? SSH?CUDA???????????? 24GB ?????</p>
+            <h3>准备远程 Linux GPU</h3>
+            <p>完成 SSH、CUDA、磁盘和网络检查，先使用 24GB 显存档位。</p>
           </li>
           <li>
-            <h3>?? LeRobot ACT ??</h3>
-            <p>???????????????? actions.csv ??????</p>
+            <h3>运行 LeRobot ACT 基线</h3>
+            <p>跑最小训练或评测示例，导出真实的 actions.csv 和实验日志。</p>
           </li>
           <li>
-            <h3>???????</h3>
-            <p>????????????????? SmolVLA?OpenVLA ?????</p>
+            <h3>接入安全执行器</h3>
+            <p>统计动作接受、修正和拒绝情况，再与 SmolVLA、OpenVLA 结果比较。</p>
           </li>
           <li>
-            <h3>?????????</h3>
-            <p>??????????????????????????????????</p>
+            <h3>完成真实机械臂预检</h3>
+            <p>只有碰撞、限位、速度、陈旧动作和急停全部通过后，才允许低速真实运动。</p>
           </li>
         </ol>
       </section>
 
       <section class="content-section page-width" aria-labelledby="paper-title">
         <div class="section-intro">
-          <h2 id="paper-title">????</h2>
-          <p>??????????????????????</p>
+          <h2 id="paper-title">论文状态</h2>
+          <p>当前只有方案和写作框架，没有完成的实验结论。</p>
         </div>
 
         <div class="work-list">
           <article>
             <div>
-              <h3>?? 1?VLA-to-MoveIt ??????</h3>
-              <p>????? Mock ???????? LeRobot ACT ????? VLA ????????</p>
+              <h3>论文 1：VLA-to-MoveIt 安全执行评测</h3>
+              <p>协议和本地 Mock 数据已准备，仍缺 LeRobot ACT 与至少一个 VLA 的真实动作日志。</p>
             </div>
-            <span>???</span>
+            <span>缺实验</span>
           </article>
           <article>
             <div>
-              <h3>?? 2???? VLA ??</h3>
-              <p>??????????????????????????????????</p>
+              <h3>论文 2：低资源 VLA 适配</h3>
+              <p>需要真实训练数据、显存占用、训练时长和任务成功率，目前尚未开始实验。</p>
             </div>
-            <span>???</span>
+            <span>计划中</span>
           </article>
           <article>
             <div>
-              <h3>?? 3??????????????</h3>
-              <p>???????????????????????????????</p>
+              <h3>论文 3：远程策略服务与本地安全执行</h3>
+              <p>本地接口和测试框架已有，仍缺远程服务器的延迟、超时和动作日志。</p>
             </div>
-            <span>?????</span>
+            <span>缺远程数据</span>
           </article>
         </div>
       </section>
 
       <section class="contact page-width" aria-labelledby="contact-title">
-        <h2 id="contact-title">??</h2>
-        <p>???? <a href="https://github.com/zch1414" target="_blank" rel="noreferrer">GitHub @zch1414</a> ????</p>
+        <h2 id="contact-title">联系</h2>
+        <p>可以通过 <a href="https://github.com/zch1414" target="_blank" rel="noreferrer">GitHub @zch1414</a> 找到我。</p>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="page-width footer-inner">
-        <p>? 2026 ZCH</p>
+        <p>© 2026 ZCH</p>
         <p>Robot image: <a href="https://www.flickr.com/photos/22902505@N05/16422885845" target="_blank" rel="noreferrer">Misanthropic One</a>, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noreferrer">CC BY 2.0</a></p>
       </div>
     </footer>
